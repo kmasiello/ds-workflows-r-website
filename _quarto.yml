@@ -1,0 +1,20 @@
+project:
+  type: website
+  render:
+    - "index.qmd"
+  output-dir: docs
+
+
+website:
+  title: "Data Science Workflows with Posit tools - Python focus"
+  description: "This one-day workshop provides an introduction to building Data Science workflows in Python using Posit's professional products."
+  repo-actions: [edit, issue]
+
+format:
+  html:
+    theme:
+      - default
+      - styles.css
+    toc: true
+    
+fig-format: svg   
