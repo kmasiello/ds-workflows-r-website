@@ -6,7 +6,7 @@ project:
 
 
 website:
-  title: "Data Science Workflows with Posit tools - Python focus"
+  title: "Data Science Workflows with Posit Tools - R focus"
   description: "This one-day workshop provides an introduction to building Data Science workflows in Python using Posit's professional products."
   repo-actions: [edit, issue]
 
