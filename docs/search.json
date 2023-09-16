@@ -21,25 +21,11 @@
     "text": "Workshop Materials\nHands on activities and the assets for the completed Food Inspections project are available at:\nhttps://github.com/posit-conf-2023/ds-workflows-r"
   },
   {
-    "objectID": "index.html#is-this-workshop-for-me",
-    "href": "index.html#is-this-workshop-for-me",
+    "objectID": "index.html#resources",
+    "href": "index.html#resources",
     "title": "Data Science Workflows with Posit Tools - R focus",
-    "section": "Is this workshop for me?",
-    "text": "Is this workshop for me?\nThis workshop is for you if you…\n\nBuild finished data products starting from raw data and are looking to improve your workflow\nAre looking to expand your knowledge of Posit open source and professional tools\nWant to improve interoperability between data products in your work or on your team\nHave experience developing in R. An analogous course with a Python focus is also offered"
-  },
-  {
-    "objectID": "index.html#prework",
-    "href": "index.html#prework",
-    "title": "Data Science Workflows with Posit Tools - R focus",
-    "section": "Prework",
-    "text": "Prework\nThis workshop requires that you bring your own laptop.\nSo we can hit the ground running, please view the video below before the Workshop:\n👉 https://rstudio.wistia.com/medias/uaettrtu1j\nWritten instructions for registering with Posit Connect are also below:\n\nVisit https://connect.conf23workflows.training.posit.co.\nClick the “Sign Up” button at the top right.\nSign up with your personal email.\nMake your username the prefix of your personal email.\nCheck your email to confirm your account. The email will be from “conf23workflows@training.rstudio.com” (check your junk folder)\n\nWe will be using Discord as our main communication method! To make the process go smoothly:\n\nPlease sign up for an account if you don’t already have one.\nMake sure your display name is the one you used to register for the conference.\nIn your “About Me,” put the name of your workshop: “Data Science Workflows with Posit Tools — R Focus”\n\nCloser to the start of the conference, we will invite you to the posit::conf Discord server. Once you’ve accepted the invite, we will add you to the channel(s) for your conf workshop(s).\nIf you have questions in advance of the workshop, please reach out to either Ryan (ryan@posit.co) and/or Katie (katie.masiello@posit.co)."
-  },
-  {
-    "objectID": "index.html#schedule",
-    "href": "index.html#schedule",
-    "title": "Data Science Workflows with Posit Tools - R focus",
-    "section": "Schedule",
-    "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00 - 10:30\nSession 1\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nSession 2\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nSession 3\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nSession 4"
+    "section": "Resources",
+    "text": "Resources\nWe cover a lot of ground. See the list of resources for references to come back to."
   },
   {
     "objectID": "index.html#instructors",
@@ -70,27 +56,6 @@
     "text": "Reuse and licensing\n\n This work is licensed under a Creative Commons Attribution 4.0 International License."
   },
   {
-    "objectID": "index.html#resources",
-    "href": "index.html#resources",
-    "title": "Data Science Workflows with Posit Tools - R focus",
-    "section": "Resources",
-    "text": "Resources\nWe cover a lot of ground. See the list of resources for references to come back to."
-  },
-  {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Data Science Workflows with Posit Tools - R focus",
-    "section": "",
-    "text": "We cover a lot of ground in this workshop. Below is a summary of the packages and references that you may find helpful to revisit.\n\n\n\npointblank::scan_data()\n\n\n\n\n\nBest practices in working with databases\nConnect to a database\nQuery a database table\nSecuring credentials\nMaking scripts portable\n\n\n\n\n\npointblank\nTry the pointblank test drive on Posit Cloud to see all the features\nPointblank data dictionary (a.k.a. the informant)\nMonitor data quality over time with the pointblank multiagent\n\n\n\n\n\nblastula\nEmail customization from the Connect User Guide\n\n\n\n\n\ntidymodels\nvetiver\npins\nplumber\n\n\n\n\n\n\n\nGet started with Shiny (R or Python!)\nGallery of examples\nThe authoritative reference, Mastering Shiny (Don’t let the title fool you, it’s great for beginners!)\nbslib - add themes, components, and layouts to your dashboard with ease\nthematic - extends your Shiny theme to plots\nshinyuieditor - a visual tool to help create the UI portion of your Shiny app\n\n\n\n\n\nStart here 👉 Joe Cheng’s Shiny in Production talk at 2019 rstudio::conf\nThe Performance chapter of Mastering Shiny\nAdd logging to app with log4r\nUse shinyloadtest to simulate app performance under load\nUse profvis to profile your app to identify bottlenecks\n\n\n\n\n\n\nUse of Tags on Connect\nconnectwidgets\nPosit Connect Server API\n\nReference\nAPI Cookbook\nExample reports and apps\nconnectapi R package that is a wrapper around the API\n\n\n\n\n\n\n\n\nUnderstanding Repositories and Libraries\nrenv\n\n\n\n\n\nDeployment methods for Connect\nPublishing Workflows for Connect\nDev/Test/Prod with Posit Team:\nConnect User Guide for Git-backed deployment\nGit-backed publishing patterns\nExamples of CI/CD deployment patterns for:\n\nGitHub Actions\nGitLab CI/CD\nAzure Pipelines\nBitbucket Pipelines\nJenkins"
-  },
-  {
-    "objectID": "resources.html#workshop-resources",
-    "href": "resources.html#workshop-resources",
-    "title": "Data Science Workflows with Posit Tools - R focus",
-    "section": "",
-    "text": "We cover a lot of ground in this workshop. Below is a summary of the packages and references that you may find helpful to revisit.\n\n\n\npointblank::scan_data()\n\n\n\n\n\nBest practices in working with databases\nConnect to a database\nQuery a database table\nSecuring credentials\nMaking scripts portable\n\n\n\n\n\npointblank\nTry the pointblank test drive on Posit Cloud to see all the features\nPointblank data dictionary (a.k.a. the informant)\nMonitor data quality over time with the pointblank multiagent\n\n\n\n\n\nblastula\nEmail customization from the Connect User Guide\n\n\n\n\n\ntidymodels\nvetiver\npins\nplumber\n\n\n\n\n\n\n\nGet started with Shiny (R or Python!)\nGallery of examples\nThe authoritative reference, Mastering Shiny (Don’t let the title fool you, it’s great for beginners!)\nbslib - add themes, components, and layouts to your dashboard with ease\nthematic - extends your Shiny theme to plots\nshinyuieditor - a visual tool to help create the UI portion of your Shiny app\n\n\n\n\n\nStart here 👉 Joe Cheng’s Shiny in Production talk at 2019 rstudio::conf\nThe Performance chapter of Mastering Shiny\nAdd logging to app with log4r\nUse shinyloadtest to simulate app performance under load\nUse profvis to profile your app to identify bottlenecks\n\n\n\n\n\n\nUse of Tags on Connect\nconnectwidgets\nPosit Connect Server API\n\nReference\nAPI Cookbook\nExample reports and apps\nconnectapi R package that is a wrapper around the API\n\n\n\n\n\n\n\n\nUnderstanding Repositories and Libraries\nrenv\n\n\n\n\n\nDeployment methods for Connect\nPublishing Workflows for Connect\nDev/Test/Prod with Posit Team:\nConnect User Guide for Git-backed deployment\nGit-backed publishing patterns\nExamples of CI/CD deployment patterns for:\n\nGitHub Actions\nGitLab CI/CD\nAzure Pipelines\nBitbucket Pipelines\nJenkins"
-  },
-  {
     "objectID": "about.html#is-this-workshop-for-me",
     "href": "about.html#is-this-workshop-for-me",
     "title": "Data Science Workflows with Posit Tools - R focus",
@@ -110,5 +75,19 @@
     "title": "Data Science Workflows with Posit Tools - R focus",
     "section": "Schedule",
     "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00 - 10:30\nSession 1\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nSession 2\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nSession 3\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nSession 4"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Data Science Workflows with Posit Tools - R focus",
+    "section": "",
+    "text": "We cover a lot of ground in this workshop. Below is a summary of the packages and references that you may find helpful to revisit.\n\n\n\npointblank::scan_data()\n\n\n\n\n\nBest practices in working with databases\nConnect to a database\nQuery a database table\nSecuring credentials\nMaking scripts portable\n\n\n\n\n\npointblank\nTry the pointblank test drive on Posit Cloud to see all the features\nPointblank data dictionary (a.k.a. the informant)\nMonitor data quality over time with the pointblank multiagent\n\n\n\n\n\nblastula\nEmail customization from the Connect User Guide\n\n\n\n\n\ntidymodels\nvetiver\npins\nplumber\n\n\n\n\n\n\n\nGet started with Shiny (R or Python!)\nGallery of examples\nThe authoritative reference, Mastering Shiny (Don’t let the title fool you, it’s great for beginners!)\nbslib - add themes, components, and layouts to your dashboard with ease\nthematic - extends your Shiny theme to plots\nshinyuieditor - a visual tool to help create the UI portion of your Shiny app\n\n\n\n\n\nStart here 👉 Joe Cheng’s Shiny in Production talk at 2019 rstudio::conf\nThe Performance chapter of Mastering Shiny\nAdd logging to app with log4r\nUse shinyloadtest to simulate app performance under load\nUse profvis to profile your app to identify bottlenecks\n\n\n\n\n\n\nUse of Tags on Connect\nconnectwidgets\nPosit Connect Server API\n\nReference\nAPI Cookbook\nExample reports and apps\nconnectapi R package that is a wrapper around the API\n\n\n\n\n\n\n\n\nUnderstanding Repositories and Libraries\nrenv\n\n\n\n\n\nDeployment methods for Connect\nPublishing Workflows for Connect\nDev/Test/Prod with Posit Team:\nConnect User Guide for Git-backed deployment\nGit-backed publishing patterns\nExamples of CI/CD deployment patterns for:\n\nGitHub Actions\nGitLab CI/CD\nAzure Pipelines\nBitbucket Pipelines\nJenkins"
+  },
+  {
+    "objectID": "resources.html#workshop-resources",
+    "href": "resources.html#workshop-resources",
+    "title": "Data Science Workflows with Posit Tools - R focus",
+    "section": "",
+    "text": "We cover a lot of ground in this workshop. Below is a summary of the packages and references that you may find helpful to revisit.\n\n\n\npointblank::scan_data()\n\n\n\n\n\nBest practices in working with databases\nConnect to a database\nQuery a database table\nSecuring credentials\nMaking scripts portable\n\n\n\n\n\npointblank\nTry the pointblank test drive on Posit Cloud to see all the features\nPointblank data dictionary (a.k.a. the informant)\nMonitor data quality over time with the pointblank multiagent\n\n\n\n\n\nblastula\nEmail customization from the Connect User Guide\n\n\n\n\n\ntidymodels\nvetiver\npins\nplumber\n\n\n\n\n\n\n\nGet started with Shiny (R or Python!)\nGallery of examples\nThe authoritative reference, Mastering Shiny (Don’t let the title fool you, it’s great for beginners!)\nbslib - add themes, components, and layouts to your dashboard with ease\nthematic - extends your Shiny theme to plots\nshinyuieditor - a visual tool to help create the UI portion of your Shiny app\n\n\n\n\n\nStart here 👉 Joe Cheng’s Shiny in Production talk at 2019 rstudio::conf\nThe Performance chapter of Mastering Shiny\nAdd logging to app with log4r\nUse shinyloadtest to simulate app performance under load\nUse profvis to profile your app to identify bottlenecks\n\n\n\n\n\n\nUse of Tags on Connect\nconnectwidgets\nPosit Connect Server API\n\nReference\nAPI Cookbook\nExample reports and apps\nconnectapi R package that is a wrapper around the API\n\n\n\n\n\n\n\n\nUnderstanding Repositories and Libraries\nrenv\n\n\n\n\n\nDeployment methods for Connect\nPublishing Workflows for Connect\nDev/Test/Prod with Posit Team:\nConnect User Guide for Git-backed deployment\nGit-backed publishing patterns\nExamples of CI/CD deployment patterns for:\n\nGitHub Actions\nGitLab CI/CD\nAzure Pipelines\nBitbucket Pipelines\nJenkins"
   }
 ]

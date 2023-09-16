@@ -3,7 +3,7 @@ format:
   positconfslides-revealjs: 
     chalkboard: true
     slide-number: c/t
-    footer: "[https://posit-conf-2023.github.io/ds-workflows-r/](https://posit-conf-2023.github.io/ds-workflows-r/)"
+    footer: "[Data Science Workflows with Posit Tools - R Focus](https://katie.quarto.pub/ds-workflows-r/)"
     code-copy: true
     center-title-slide: false
     code-link: true
@@ -23,18 +23,6 @@ execute:
 
 ![](https://rstudio.github.io/renv/logo.svg){.absolute top="200" left="50" width="260"} ![](slide_resources/devtestprod.png){.absolute top="300" left="310" width="260"}
 
-<!-- ## Session Outline -->
-
-<!-- -   Environments management (renv, and use PPM as a repository) -->
-
-<!-- -   Dev, test, prod workflows with git backed and CICD -->
-
-<!-- -   hot swap urls -->
-
-<!-- -   deploying content that uses a private package -->
-
-<!-- -   interoperability (maybe just note in the recap) -->
-
 ## Where we are
 
 ![](slide_resources/workflow_diagram.jpg){fig-align="center"}
@@ -51,7 +39,7 @@ execute:
 <br> But this is [*production*]{.fuchsia}, not showbiz. <sigh>
 :::
 
-## How to avoid common pitfalls and look like a professional while doing it™
+## Improving & Protecting your Workflow
 
 -   Manage your environment
 -   Use a dev-test-prod workflow
@@ -60,13 +48,9 @@ execute:
 
 > Think of your data science workbench as a kitchen:
 >
-> -   The [**repository**]{.fuchsia} is the grocery store, a central place where everyone gets their packages.
-> -   The [**library**]{.fuchsia} is the pantry, where you keep your own private set of packages.
-> -   [**Installation**]{.fuchsia} is the shopping trip to stock your library with packages from the repository.
-
-## (notes)
-
-Talk about PPM as the repository. Have private packages too. this makes it really easy to move from dev to prod.
+> -   A [**repository**]{.fuchsia} is the grocery store, a central place where everyone gets their packages.
+> -   A [**library**]{.fuchsia} is the pantry, where you keep your own private set of packages.
+> -   A [**Package**]{.fuchsia} is the food!
 
 ## Environments
 
@@ -179,26 +163,26 @@ Ensure your data products behave as expected and there are no surprises
 
 ![](slide_resources/devtestprod2.png){fig-align="center" height="620"}
 
-
 ## Deployment Methods to Posit Connect
 
-:::{.fragment}
+1.  Push-button ![](slide_resources/publishIcon_2x.png){height="50" style="vertical-align:middle"}
+2.  Git-backed {{< fa brands git-alt >}}
+3.  Programmatic {{< fa gears >}}
 
-1. Push-button ![](slide_resources/publishIcon_2x.png){height="50" style="vertical-align:middle"} 
-2. Git-backed {{< fa brands git-alt >}}
-3. Programmatic {{< fa gears >}}
+📣 Push-button is good for rapid prototyping. Beyond that, you really should be using [**git-backed or programmatic deployment via CI/CD pipeline**]{.fuchsia} to keep your code in sync with your deployment.
 
-:::
-:::{.fragment}
+## Git Backed Deployment
 
-📣 Push-button is good for rapid prototyping. Beyond that, you really should be using [**git-backed or programmatic deployment via CI/CD pipeline**]{.fuchsia} to keep your code in sync with your deployment. 
+Connect will deploy directly from your git repository
 
-<!-- TODO: find a place to have a git back deploy activity -->
-:::
+![](https://solutions.posit.co/operations/deploy-methods/git-backed.png){fig-align="center"}
 
+Ref:
 
+-   <https://docs.posit.co/connect/user/git-backed/>
+-   <https://solutions.posit.co/operations/deploy-methods/#git-backed-publishing>
 
-## Dev-Test-Prod Methods // Git-backed Deployment
+## Dev-Test-Prod Methods [// Git-backed Deployment]{.teal}
 
 ::: columns
 ::: {.column width="40%"}
@@ -206,30 +190,15 @@ Ensure your data products behave as expected and there are no surprises
 :::
 
 ::: {.column .smaller width="60%"}
-::: fragment
-1.  Create manifest describing the project environment and dependencies
+-   Deploy production and test branches
 
-``` {.r code-line-numbers="false"}
-# from within project directory
-rsconnect::writeManifest() 
-```
-:::
+-   Automatically update production with a git merge
 
-::: fragment
-2.  Commit `manifest.json` to git repo
-:::
-
-::: fragment
-3.  Import from Git
-
-![](slide_resources/import-from-git.png){height="380" style="padding-left: 50px;"}
-
-Ref: <https://docs.posit.co/connect/user/git-backed/>
-:::
+-   Stakeholders keep the same stable URL throughout
 :::
 :::
 
-## Dev-Test-Prod Methods // CI/CD Deployment
+## Dev-Test-Prod Methods [// CI/CD Deployment]{.fuchsia}
 
 ::: columns
 ::: {.column width="40%"}
@@ -237,15 +206,11 @@ Ref: <https://docs.posit.co/connect/user/git-backed/>
 :::
 
 ::: {.column .smaller width="60%"}
-::: fragment
 -   A CI/CD pipeline can utilize:
     -   the API directly
     -   a Posit-created GitHub Action
     -   a Python (`rsconnect-python`) or R (`connectapi`) package
-:::
-
-::: fragment
--   See <https://solutions.posit.co/operations/deploy-methods/ci-cd/> for example CI/CD deployment scripts for:
+-   See <https://solutions.posit.co/operations/deploy-methods/ci-cd/> for examples:
     -   GitHub Actions
     -   GitLab CI/CD
     -   Azure Pipelines
@@ -253,13 +218,37 @@ Ref: <https://docs.posit.co/connect/user/git-backed/>
     -   Jenkins
 :::
 :::
-:::
 
 ## More Resources
 
+-   Deployment methods for Connect: <https://solutions.posit.co/operations/deploy-methods>
 -   Dev/Test/Prod with Posit Team: <https://solutions.posit.co/operations/code-promotion/>
 -   Publishing Workflows for Connect: <https://solutions.posit.co/operations/publishing-wkflow/>
 
-## Workshop Feedback {.content2-light}
+##  {.brackets-dark}
+
+:::{.section-title-dark }
+
+<h2> That's a wrap!<br>
+🤪 🥴 🫨 😵</h2>
+
+:::
+
+## Recap of Resources
+
+<https://katie.quarto.pub/ds-workflows-r/resources.html>
+
+<iframe src="https://katie.quarto.pub/ds-workflows-r/resources.html" width=900 height =650></iframe>
+
+
+## Now what?
+
+### Posit Team
+
+-   Reach out to your CS Rep
+-   Join us for our [Monthly Posit Team Workflows](https://www.youtube.com/playlist?list=PL9HYL-VRX0oRsUB5AgNMQuKuHPpNDLBVt)
+    -   Last Wednesday of every month -- 11 am EST
+
+### Workshop Feedback 
 
 Please go to [pos.it/conf-workshop-survey](pos.it/conf-workshop-survey). Your feedback is crucial! Data from the survey informs curriculum and format decisions for future conf workshops, and we really appreciate you taking the time to provide it.
