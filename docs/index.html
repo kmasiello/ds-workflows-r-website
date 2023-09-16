@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -39,11 +40,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -54,19 +55,156 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
 
 </head>
 
-<body>
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Data Science Workflows with Posit Tools - R focus</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-slides" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Slides</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
+        <li>
+    <a class="dropdown-item" href="./workshop-slides/01_workshop_and_project_intro.html" rel="" target="">
+ <span class="dropdown-text">01 - Workshop and Project Intro</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./workshop-slides/02_data_exploration_and_databases.html" rel="" target="">
+ <span class="dropdown-text">02 - Data Exploration and Database Essentials</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./workshop-slides/03_data_validation_and_alerting.html" rel="" target="">
+ <span class="dropdown-text">03 - Data Validation and Alerting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./workshop-slides/04_tidymodels_and_vetiver.html" rel="" target="">
+ <span class="dropdown-text">04 - Modeling and MLOps</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./workshop-slides/05_delivery.html" rel="" target="">
+ <span class="dropdown-text">05 - Delivering Insights Effectively</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./workshop-slides/06_managing_environments.html" rel="" target="">
+ <span class="dropdown-text">06 - Managing Environments</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html#schedule" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/posit-conf-2023/ds-workflows-r" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text">Workshop Materials</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/posit-conf-2023/ds-workflows-r" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Slides</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workshop-slides/01_workshop_and_project_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">01 - Workshop and Project Intro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workshop-slides/02_data_exploration_and_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">02 - Data Exploration and Database Essentials</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workshop-slides/03_data_validation_and_alerting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">03 - Data Validation and Alerting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workshop-slides/04_tidymodels_and_vetiver.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04 - Modeling and MLOps</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workshop-slides/05_delivery.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">05 - Delivering Insights Effectively</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workshop-slides/06_managing_environments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">06 - Managing Environments</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -74,9 +212,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
-  <li><a href="#is-this-workshop-for-me" id="toc-is-this-workshop-for-me" class="nav-link" data-scroll-target="#is-this-workshop-for-me">Is this workshop for me?</a></li>
-  <li><a href="#prework" id="toc-prework" class="nav-link" data-scroll-target="#prework">Prework</a></li>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
+  <li><a href="#workshop-materials" id="toc-workshop-materials" class="nav-link" data-scroll-target="#workshop-materials">Workshop Materials</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   <li><a href="#instructors" id="toc-instructors" class="nav-link" data-scroll-target="#instructors">Instructors</a></li>
   
   
@@ -93,79 +230,16 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
 <p>These are the materials for a one-day workshop on <b>Building Data Science Workflows in R Using Posit Tools</b> on Sunday, 17 Sept 2023 at <a href="http://pos.it/conf">posit::conf 2023</a>!</p>
 <p>In this R-focused workshop, we will discuss ways to improve your data science workflows. During the course, we will review packages for data validation, alerting, modeling, and more. We’ll use Posit’s open source and professional tools to string all the pieces together for an efficient workflow. We’ll discuss environments, managing deployed content, working with databases, and interoperability across data products.</p>
+<p>For additional details see <a href="./about.html">About</a></p>
 </section>
-<section id="is-this-workshop-for-me" class="level2">
-<h2 class="anchored" data-anchor-id="is-this-workshop-for-me">Is this workshop for me?</h2>
-<p>This workshop is for you if you…</p>
-<ul>
-<li>Build finished data products starting from raw data and are looking to improve your workflow</li>
-<li>Are looking to expand your knowledge of Posit open source and professional tools</li>
-<li>Want to improve interoperability between data products in your work or on your team</li>
-<li>Have experience developing in R. An <a href="https://posit-conf-2023.github.io/ds-workflows-python/">analogous course with a Python focus</a> is also offered</li>
-</ul>
+<section id="workshop-materials" class="level2">
+<h2 class="anchored" data-anchor-id="workshop-materials">Workshop Materials</h2>
+<p>Hands on activities and the assets for the completed Food Inspections project are available at:</p>
+<p><a href="https://github.com/posit-conf-2023/ds-workflows-r" class="uri">https://github.com/posit-conf-2023/ds-workflows-r</a></p>
 </section>
-<section id="prework" class="level2">
-<h2 class="anchored" data-anchor-id="prework">Prework</h2>
-<p>This workshop requires that you bring your own laptop.</p>
-<p>So we can hit the ground running, please view the video below before the Workshop:</p>
-<p>👉 <a href="https://rstudio.wistia.com/medias/uaettrtu1j" class="uri">https://rstudio.wistia.com/medias/uaettrtu1j</a></p>
-<p>Written instructions for registering with Posit Connect are also below:</p>
-<ol type="1">
-<li>Visit <a href="https://connect.conf23workflows.training.posit.co" class="uri">https://connect.conf23workflows.training.posit.co</a>.</li>
-<li>Click the “Sign Up” button at the top right.</li>
-<li>Sign up with your personal email.</li>
-<li>Make your username the prefix of your personal email.</li>
-<li>Check your email to confirm your account. The email will be from “conf23workflows@training.rstudio.com” (check your junk folder)</li>
-</ol>
-<p>We will be using Discord as our main communication method! To make the process go smoothly:</p>
-<ul>
-<li>Please <a href="https://discord.com/">sign up for an account</a> if you don’t already have one.</li>
-<li>Make sure your <a href="https://support.discord.com/hc/en-us/articles/12620128861463-New-Usernames-Display-Names#h_01GXPQABMYGEHGPRJJXJMPHF5C">display name</a> is the one you used to register for the conference.</li>
-<li>In your “About Me,” put the name of your workshop: “Data Science Workflows with Posit Tools — R Focus”</li>
-</ul>
-<p>Closer to the start of the conference, we will invite you to the posit::conf Discord server. Once you’ve accepted the invite, we will add you to the channel(s) for your conf workshop(s).</p>
-<p>If you have questions in advance of the workshop, please reach out to either Ryan (ryan@posit.co) and/or Katie (katie.masiello@posit.co).</p>
-</section>
-<section id="schedule" class="level2">
-<h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Time</th>
-<th style="text-align: left;">Activity</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">09:00 - 10:30</td>
-<td style="text-align: left;">Session 1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">10:30 - 11:00</td>
-<td style="text-align: left;"><em>Coffee break</em></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">11:00 - 12:30</td>
-<td style="text-align: left;">Session 2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">12:30 - 13:30</td>
-<td style="text-align: left;"><em>Lunch break</em></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">13:30 - 15:00</td>
-<td style="text-align: left;">Session 3</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">15:00 - 15:30</td>
-<td style="text-align: left;"><em>Coffee break</em></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">15:30 - 17:00</td>
-<td style="text-align: left;">Session 4</td>
-</tr>
-</tbody>
-</table>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<p>We cover a lot of ground. See the <a href="./resources.html">list of resources</a> for references to come back to.</p>
 </section>
 <section id="instructors" class="level2">
 <h2 class="anchored" data-anchor-id="instructors">Instructors</h2>
@@ -182,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
 
-<p>This website, including the slides, is made with <a href="https://quarto.org/">Quarto</a>. Please <a href="https://github.com/posit-conf-2023/vetiver/issues">submit an issue</a> on the GitHub repo for this workshop if you find something that could be fixed or improved.</p>
+<p>This website, including the slides, is made with <a href="https://quarto.org/">Quarto</a>. Please <a href="https://github.com/posit-conf-2023/ds-workflows-r/issues">submit an issue</a> on the GitHub repo for this workshop if you find something that could be fixed or improved.</p>
 </div></section><section id="notice" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Notice</h2><div class="quarto-appendix-contents">
 
 <p>The sample data science project used for this workshop provides applications using data that has been modified for use from its original source, <a href="https://www.cityofchicago.org">www.cityofchicago.org</a>, the official website of the City of Chicago. The City of Chicago makes no claims as to the content, accuracy, timeliness, or completeness of any of the data provided at this site. The data provided at this site is subject to change at any time. It is understood that the data provided at this site is being used at one’s own risk.</p>
@@ -426,6 +500,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">This page was built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

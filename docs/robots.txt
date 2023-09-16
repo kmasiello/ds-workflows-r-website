@@ -1,1 +1,1 @@
-Sitemap: https://katie.quarto.pub/data-science-workflows-with-posit-tools---r-focus/sitemap.xml
+Sitemap: https://katie.quarto.pub/ds-workflows-r/sitemap.xml
