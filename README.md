@@ -25,6 +25,11 @@ In this R-focused workshop, we will discuss ways to improve your data science wo
 -   Want to improve interoperability between data products in your work or on your team
 -   Have experience developing in R. An analogous course with a Python focus is also offered
 
+## Workshop Materials
+
+Hands on activities and the assets for the completed Food Inspections project are available at:
+
+https://github.com/posit-conf-2023/ds-workflows-r
 
 ## Prework
 
