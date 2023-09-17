@@ -525,7 +525,6 @@
 </div>
 <div class="callout-content">
 <p>👉 Open the file <code>materials/activities/activity-07_shiny.qmd</code></p>
-<p><strong>Complete Task 1 only!</strong></p>
 </div>
 </div>
 </div>
@@ -654,7 +653,7 @@
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>Content returned by <code>connectwidgets::content</code> will be scoped to the API key provided.</p>
+<p>Content returned by <code><a href="https://rstudio.github.io/connectwidgets/reference/content.html">connectwidgets::content</a></code> will be scoped to the API key provided.</p>
 </div>
 </div>
 </div>
@@ -675,23 +674,7 @@
 <p><br></p>
 <p>🧰 Posit Connect Server API</p>
 </div>
-<div class="fragment">
-<ul>
-<li>Interact remotely with the Connect Server API using HTTP requests directly via:
-<ul>
-<li>
-<code>curl</code> - Linux tool for making HTTP calls</li>
-<li>
-<code>httr</code> - R HTTP library</li>
-<li>
-<code>requests</code> - Python HTTP library</li>
-</ul>
-</li>
-<li>Or use <a href="https://pkgs.rstudio.com/connectapi/"><code>connectapi</code></a> R package, which provides a wrapper around HTTP requests</li>
-</ul>
-<p><img data-src="https://pkgs.rstudio.com/connectapi/reference/figures/logo.svg" class="absolute" style="top: 590px; left: 260px; width: 220px; "></p>
-</div>
-</section><section class="slide level2"><h2>Connect Server API endpoints</h2>
+</section><section class="slide level2"><h2>Posit Connect Server API endpoints</h2>
 <p><em>Most endpoints require an API Key</em>, and <span class="fuchsia"><strong>results will be scoped to the permissions of the key</strong></span>. <br></p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -717,8 +700,41 @@
 </div>
 <p>See full documentation at <a href="https://docs.posit.co/connect/api/" class="uri">https://docs.posit.co/connect/api/</a></p>
 </section><section class="slide level2"><h2>Example Content Usage Report</h2>
-<p><img data-src="slide_resources/usage-report.png" height="800"></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://connect.conf23workflows.training.posit.co/chicago-food-r/content-usage/"><img data-src="slide_resources/usage-report.png" height="800"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r code-overflow-wrap number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>...</span>
+<span id="cb3-2"><a href="#cb3-2"></a>con <span class="ot">&lt;-</span> connectapi<span class="sc">::</span><span class="fu">connect</span>()</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a>app_usage <span class="ot">&lt;-</span> <span class="fu">get_usage_shiny</span>(</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  client,</span>
+<span id="cb3-6"><a href="#cb3-6"></a>  <span class="at">from =</span> report_from,</span>
+<span id="cb3-7"><a href="#cb3-7"></a>  <span class="at">limit =</span> <span class="cn">Inf</span>,</span>
+<span id="cb3-8"><a href="#cb3-8"></a>  <span class="at">content_guid =</span> guid</span>
+<span id="cb3-9"><a href="#cb3-9"></a>)</span>
+<span id="cb3-10"><a href="#cb3-10"></a>...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 <p><i class="bi-sign-turn-right-fill " style="color: orange;" role="img" aria-hidden="true"></i> See more examples: <a href="https://solutions.posit.co/operations/connect-apis/" class="uri">https://solutions.posit.co/operations/connect-apis/</a></p>
+</section><section class="slide level2"><h2>Accessing the Connect Server API</h2>
+<ul>
+<li>Interact remotely with the Connect Server API using HTTP requests directly via:
+<ul>
+<li>
+<code>curl</code> - Linux tool for making HTTP calls</li>
+<li>
+<code>httr</code> - R HTTP library</li>
+<li>
+<code>requests</code> - Python HTTP library</li>
+</ul>
+</li>
+<li>Or use <a href="https://pkgs.rstudio.com/connectapi/"><code>connectapi</code></a> R package, which provides a wrapper around HTTP requests</li>
+</ul>
+<p><img data-src="https://pkgs.rstudio.com/connectapi/reference/figures/logo.svg" class="absolute" style="top: 590px; left: 260px; width: 220px; "></p>
 </section><section class="slide level2"><h2>Connect Server API Resources</h2>
 <ul>
 <li>Reference <a href="https://docs.posit.co/connect/api/" class="uri">https://docs.posit.co/connect/api/</a>
@@ -732,7 +748,7 @@
 </ul>
 
 <div class="footer footer-default">
-<p><a href="https://posit-conf-2023.github.io/ds-workflows-r/">https://posit-conf-2023.github.io/ds-workflows-r/</a></p>
+<p><a href="https://katie.quarto.pub/ds-workflows-r/">Data Science Workflows with Posit Tools - R Focus</a></p>
 </div>
 </section>
 </div>

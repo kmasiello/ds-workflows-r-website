@@ -413,7 +413,7 @@ Working with Databases
 <ul>
 <li>Ad-hoc data exploration</li>
 <li>Writing production data to a database</li>
-<li>Automating the process</li>
+<li>Automating the pipeline</li>
 </ul>
 </div>
 </div>
@@ -472,18 +472,20 @@ Working with Databases
 </section>
 <section class="slide level2">
 <h2>Database Connection Essentials</h2>
+<div class="fragment">
 <div class="smaller">
 <ul>
-<li class="fragment">Use <code>DBI</code> to make a connection with <code>DBI::dbConnect()</code></li>
-<li class="fragment">The first argument to <code>DBI</code> is your DBI-compliant R package
+<li>Use <code>DBI</code> to make a connection with <code>DBI::dbConnect()</code></li>
+<li>The first argument to <code>DBI</code> is your DBI-compliant R package
 <ol type="a">
-<li class="fragment">Best case: one of the DBI-compliant db-specific packages</li>
-<li class="fragment">Alternative: <code>odbc::odbc()</code> + an ODBC driver installed on your system</li>
+<li>Best case: one of the DBI-compliant db-specific packages</li>
+<li>Alternative: <code>odbc::odbc()</code> + an ODBC driver installed on your system</li>
 </ol></li>
-<li class="fragment">📣 When possible, use a database-specific R package (e.g., <code>RPostgres</code>, <code>RMariaDB</code>, <code>RSQLite</code>, <code>bigrquery</code>, etc.) instead of <code>odbc</code> + a driver. In many cases, they are more performant (especially in writing data) and may have more translations available for query types.</li>
+<li>📣 When possible, use a database-specific R package (e.g., <code>RPostgres</code>, <code>RMariaDB</code>, <code>RSQLite</code>, <code>bigrquery</code>, etc.) instead of <code>odbc</code> + a driver. In many cases, they are more performant (especially in writing data) and may have more translations available for query types.</li>
 </ul>
 </div>
-<p><img data-src="slide_resources/con_sans_odbc.png" class="absolute fragment" style="left: 30px; bottom: 25px; width: 47%; "> <img data-src="slide_resources/con_w_odbc.png" class="absolute fragment" style="bottom: 25px; right: 30px; width: 47%; "></p>
+<p><img data-src="slide_resources/con_sans_odbc.png" class="absolute" style="left: 30px; bottom: 25px; width: 47%; "> <img data-src="slide_resources/con_w_odbc.png" class="absolute" style="bottom: 25px; right: 30px; width: 47%; "></p>
+</div>
 </section>
 <section class="slide level2">
 <h2>Interacting with Databases</h2>
@@ -535,7 +537,7 @@ Working with Databases
 <section class="slide level2">
 <h2>How do I automate this process?</h2>
 <div class="fragment">
-<p>🧰 Deploy and schedule your notebook on Posit Connect</p>
+<p>🧰 Deploy and schedule your ETL and reports on Posit Connect</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="slide_resources/scheduling.png" height="700"></p>
@@ -572,7 +574,7 @@ Working with Databases
 </div>
 
 <div class="footer footer-default">
-<p><a href="https://posit-conf-2023.github.io/ds-workflows-r/">https://posit-conf-2023.github.io/ds-workflows-r/</a></p>
+<p><a href="https://katie.quarto.pub/ds-workflows-r/">Data Science Workflows with Posit Tools - R Focus</a></p>
 </div>
 </div>
 </div>

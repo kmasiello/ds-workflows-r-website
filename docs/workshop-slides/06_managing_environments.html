@@ -400,12 +400,6 @@
 <div class="column" style="width:100%;">
 <h2>Managing Environments</h2>
 <p><img data-src="https://rstudio.github.io/renv/logo.svg" class="absolute" style="top: 200px; left: 50px; width: 260px; "> <img data-src="slide_resources/devtestprod.png" class="absolute" style="top: 300px; left: 310px; width: 260px; "></p>
-<!-- ## Session Outline -->
-<!-- -   Environments management (renv, and use PPM as a repository) -->
-<!-- -   Dev, test, prod workflows with git backed and CICD -->
-<!-- -   hot swap urls -->
-<!-- -   deploying content that uses a private package -->
-<!-- -   interoperability (maybe just note in the recap) -->
 </div>
 </div>
 </section>
@@ -424,7 +418,7 @@
 </div>
 </section>
 <section class="slide level2">
-<h2>How to avoid common pitfalls and look like a professional while doing it™</h2>
+<h2>Improving &amp; Protecting your Workflow</h2>
 <ul>
 <li>Manage your environment</li>
 <li>Use a dev-test-prod workflow</li>
@@ -435,15 +429,11 @@
 <blockquote>
 <p>Think of your data science workbench as a kitchen:</p>
 <ul>
-<li>The <span class="fuchsia"><strong>repository</strong></span> is the grocery store, a central place where everyone gets their packages.</li>
-<li>The <span class="fuchsia"><strong>library</strong></span> is the pantry, where you keep your own private set of packages.</li>
-<li><span class="fuchsia"><strong>Installation</strong></span> is the shopping trip to stock your library with packages from the repository.</li>
+<li>A <span class="fuchsia"><strong>repository</strong></span> is the grocery store, a central place where everyone gets their packages.</li>
+<li>A <span class="fuchsia"><strong>library</strong></span> is the pantry, where you keep your own private set of packages.</li>
+<li>A <span class="fuchsia"><strong>Package</strong></span> is the food!</li>
 </ul>
 </blockquote>
-</section>
-<section class="slide level2">
-<h2>(notes)</h2>
-<p>Talk about PPM as the repository. Have private packages too. this makes it really easy to move from dev to prod.</p>
 </section>
 <section class="slide level2">
 <h2>Environments</h2>
@@ -563,53 +553,43 @@
 </section>
 <section class="slide level2">
 <h2>Deployment Methods to Posit Connect</h2>
-<div class="fragment">
 <ol type="1">
 <li>Push-button <img data-src="slide_resources/publishIcon_2x.png" style="vertical-align:middle" height="50"></li>
 <li>Git-backed <i class="fa-brands fa-git-alt" aria-label="git-alt"></i></li>
 <li>Programmatic <i class="fa-solid fa-gears" aria-label="gears"></i></li>
 </ol>
-</div>
-<div class="fragment">
 <p>📣 Push-button is good for rapid prototyping. Beyond that, you really should be using <span class="fuchsia"><strong>git-backed or programmatic deployment via CI/CD pipeline</strong></span> to keep your code in sync with your deployment.</p>
-<!-- TODO: find a place to have a git back deploy activity -->
-</div>
 </section>
 <section class="slide level2">
-<h2>Dev-Test-Prod Methods // Git-backed Deployment</h2>
+<h2>Git Backed Deployment</h2>
+<p>Connect will deploy directly from your git repository</p>
+
+<img data-src="https://solutions.posit.co/operations/deploy-methods/git-backed.png" class="r-stretch quarto-figure-center"><p>Ref:</p>
+<ul>
+<li><a href="https://docs.posit.co/connect/user/git-backed/" class="uri">https://docs.posit.co/connect/user/git-backed/</a></li>
+<li><a href="https://solutions.posit.co/operations/deploy-methods/#git-backed-publishing" class="uri">https://solutions.posit.co/operations/deploy-methods/#git-backed-publishing</a></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Dev-Test-Prod Methods <span class="teal">// Git-backed Deployment</span></h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <p><img data-src="slide_resources/gitbacked.png" height="800"></p>
 </div><div class="column smaller" style="width:60%;">
-<div class="fragment">
-<ol type="1">
-<li>Create manifest describing the project environment and dependencies</li>
-</ol>
-<div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># from within project directory</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>rsconnect<span class="sc">::</span><span class="fu">writeManifest</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<ol start="2" type="1">
-<li>Commit <code>manifest.json</code> to git repo</li>
-</ol>
-</div>
-<div class="fragment">
-<ol start="3" type="1">
-<li>Import from Git</li>
-</ol>
-<p><img data-src="slide_resources/import-from-git.png" style="padding-left: 50px;" height="380"></p>
-<p>Ref: <a href="https://docs.posit.co/connect/user/git-backed/" class="uri">https://docs.posit.co/connect/user/git-backed/</a></p>
-</div>
+<ul>
+<li><p>Deploy production and test branches</p></li>
+<li><p>Automatically update production with a git merge</p></li>
+<li><p>Stakeholders keep the same stable URL throughout</p></li>
+</ul>
 </div>
 </div>
 </section>
 <section class="slide level2">
-<h2>Dev-Test-Prod Methods // CI/CD Deployment</h2>
+<h2>Dev-Test-Prod Methods <span class="fuchsia">// CI/CD Deployment</span></h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <p><img data-src="slide_resources/cicd.png" height="800"></p>
 </div><div class="column smaller" style="width:60%;">
-<div class="fragment">
 <ul>
 <li>A CI/CD pipeline can utilize:
 <ul>
@@ -617,11 +597,7 @@
 <li>a Posit-created GitHub Action</li>
 <li>a Python (<code>rsconnect-python</code>) or R (<code>connectapi</code>) package</li>
 </ul></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li>See <a href="https://solutions.posit.co/operations/deploy-methods/ci-cd/" class="uri">https://solutions.posit.co/operations/deploy-methods/ci-cd/</a> for example CI/CD deployment scripts for:
+<li>See <a href="https://solutions.posit.co/operations/deploy-methods/ci-cd/" class="uri">https://solutions.posit.co/operations/deploy-methods/ci-cd/</a> for examples:
 <ul>
 <li>GitHub Actions</li>
 <li>GitLab CI/CD</li>
@@ -632,26 +608,49 @@
 </ul>
 </div>
 </div>
-</div>
 </section>
 <section class="slide level2">
 <h2>More Resources</h2>
 <ul>
+<li>Deployment methods for Connect: <a href="https://solutions.posit.co/operations/deploy-methods" class="uri">https://solutions.posit.co/operations/deploy-methods</a></li>
 <li>Dev/Test/Prod with Posit Team: <a href="https://solutions.posit.co/operations/code-promotion/" class="uri">https://solutions.posit.co/operations/code-promotion/</a></li>
 <li>Publishing Workflows for Connect: <a href="https://solutions.posit.co/operations/publishing-wkflow/" class="uri">https://solutions.posit.co/operations/publishing-wkflow/</a></li>
 </ul>
 </section>
-<section class="slide level2" data-background-image="_extensions/positconfslides/assets/backgrounds/content2-light.svg" data-background-size="contain">
+<section class="slide level2" data-background-image="_extensions/positconfslides/assets/backgrounds/brackets-dark.svg" data-background-size="contain">
 <h2></h2>
-<div class="columns">
+<div class="columns has-dark-background">
 <div class="column" style="width:100%;">
-<h2>Workshop Feedback</h2>
+<h2 style="margin-left:50px; margin-top:5px;"></h2>
+<div class="section-title-dark">
+<h2>
+That’s a wrap!<br> 🤪 🥴 🫨 😵
+</h2>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>Recap of Resources</h2>
+<p><a href="https://katie.quarto.pub/ds-workflows-r/resources.html" class="uri">https://katie.quarto.pub/ds-workflows-r/resources.html</a></p>
+<iframe src="https://katie.quarto.pub/ds-workflows-r/resources.html" width="900" height="650">
+</iframe>
+</section>
+<section class="slide level2">
+<h2>Now what?</h2>
+<h3 id="posit-team">Posit Team</h3>
+<ul>
+<li>Reach out to your CS Rep</li>
+<li>Join us for our <a href="https://www.youtube.com/playlist?list=PL9HYL-VRX0oRsUB5AgNMQuKuHPpNDLBVt">Monthly Posit Team Workflows</a>
+<ul>
+<li>Last Wednesday of every month – 11 am EST</li>
+</ul></li>
+</ul>
+<h3 id="workshop-feedback">Workshop Feedback</h3>
 <p>Please go to <a href="pos.it/conf-workshop-survey">pos.it/conf-workshop-survey</a>. Your feedback is crucial! Data from the survey informs curriculum and format decisions for future conf workshops, and we really appreciate you taking the time to provide it.</p>
 
 <div class="footer footer-default">
-<p><a href="https://posit-conf-2023.github.io/ds-workflows-r/">https://posit-conf-2023.github.io/ds-workflows-r/</a></p>
-</div>
-</div>
+<p><a href="https://katie.quarto.pub/ds-workflows-r/">Data Science Workflows with Posit Tools - R Focus</a></p>
 </div>
 </section>
     </div>

@@ -11,7 +11,7 @@
 <script src="../site_libs/quarto-contrib/posit_slides/posit-slides.js"></script>
 <link href="../site_libs/quarto-contrib/bootstrap-icons-1.9.1/all.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.3.433">
 <meta name="author" content="Instructors:   Ryan Johnson  Katie Masiello    TAs:  Sam Edwardes Rich Iannone">
 <title>Data Science Workflows with Posit Tools - R focus - Data Science Workflows with Posit Tools</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -97,7 +97,7 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -417,7 +417,6 @@
 <div class="columns">
 <div class="column" style="width:100%;">
 <h2>Logistics</h2>
-<!-- TODO: Confirm locations -->
 <p>🛜 WiFi credentials:</p>
 <ul>
 <li><p>Network: <code>Posit Conf 2023</code></p></li>
@@ -474,7 +473,7 @@
 <p><span class="fuchsia"><strong>Sam Edwardes</strong></span></p>
 <p><span class="smaller">Solutions Engineer @ Posit</span></p>
 </div><div class="column" style="width:25%;">
-<p><img data-src="slide_resources/rich-pic.png" class="hello-image"></p>
+<p><img data-src="slide_resources/rich.png" class="hello-image"></p>
 <p><span class="fuchsia"><strong>Rich Iannone</strong></span></p>
 <p><span class="smaller">Software Engineer @ Posit</span></p>
 </div>
@@ -484,29 +483,6 @@
 <div class="column" style="width:30%;">
 <p><img data-src="https://upload.wikimedia.org/wikipedia/en/8/84/Ned_Flanders.png" height="800"></p>
 </div>
-</div>
-</section><section class="slide level2"><h2>What you will learn</h2>
-<!-- TODO: note the strings and glue. -->
-<div class="smaller">
-<ul>
-<li>An opinionated end-to-end data science workflow
-<ul>
-<li>Data storage locations</li>
-<li>Data validation</li>
-<li>Automation</li>
-<li>Alerting</li>
-<li>Model development &amp; deployment</li>
-<li>Environment management</li>
-<li>Interoperability</li>
-</ul>
-</li>
-<li>We will use a combination of:
-<ul>
-<li>Open source tools (developed by Posit and others)</li>
-<li>Posit’s professional products (Workbench, Connect, and Package Manager)</li>
-</ul>
-</li>
-</ul>
 </div>
 </section><section class="slide level2"><h2>Agenda</h2>
 <table>
@@ -520,8 +496,8 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">9:00 - 10:30</td>
-<td style="text-align: left;">Workshop Introduction (20 minutes) <br> Reading, Cleaning, Writing and Validating Data (70 minutes)</td>
+<td style="text-align: left;">~9:00 - 10:30</td>
+<td style="text-align: left;">Workshop Introduction <br> Reading, Cleaning, Writing and Validating Data</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">10:30 - 11:00</td>
@@ -529,7 +505,7 @@
 <em>Coffee break</em> ☕</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">11:00 - 12:30</td>
+<td style="text-align: left;">~11:00 - 12:30</td>
 <td style="text-align: left;">Creating, Delivering, and Monitoring a model using Vetiver</td>
 </tr>
 <tr class="even">
@@ -538,7 +514,7 @@
 <em>Lunch break</em> 🥪</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">1:30 - 3:00</td>
+<td style="text-align: left;">~1:30 - 3:00</td>
 <td style="text-align: left;">Delivery</td>
 </tr>
 <tr class="even">
@@ -547,7 +523,7 @@
 <em>Coffee break</em> ☕</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">3:30 - 5:00</td>
+<td style="text-align: left;">~3:30 - 5:00</td>
 <td style="text-align: left;">Advancing your Workflow</td>
 </tr>
 </tbody>
@@ -595,25 +571,24 @@
 </table>
 </div>
 </section><section class="slide level2"><h2>Asking Questions</h2>
-<!-- TODO: Add Discord info  -->
-<p><strong>Discord</strong> - 🔴 add channel here</p>
+<p><strong>Discord</strong> - <code>#data-science-workflows-with-posit-tools-r-focus</code></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><br><br><br></p>
+<p>👉 <strong>Submit questions and respond to polls here</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure><p><img data-src="slide_resources/discord-logo-blue.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <p><br></p>
-<p>👉 <strong>Submit questions and respond to polls here</strong></p>
-<div class="absolute" style="background: #cca2b2; width: 400px; height: 300px; padding: 40px; box-shadow: 0 18px 18px -9px lightgray; margin-left: auto; margin-right: auto;top: 400px; left: 800px; ">
+<div class="absolute" style="background: #cca2b2; width: 400px; height: 300px; padding: 40px; box-shadow: 0 18px 18px -9px lightgray; margin-left: auto; margin-right: auto;top: 300px; left: 800px; ">
 <h3>
 You are always welcome to raise your hand! 🙋
 </h3>
 </div>
 <div class="fragment">
-<div class="absolute" style="background: #A6CFD5; width: 400px; height: 300px; padding: 40px; box-shadow: 0 18px 18px -9px lightgray; margin-left: auto; margin-right: auto;top: 420px; left: 820px; ">
+<div class="absolute" style="background: #A6CFD5; width: 400px; height: 300px; padding: 40px; box-shadow: 0 18px 18px -9px lightgray; margin-left: auto; margin-right: auto;top: 320px; left: 820px; ">
 <h3>
 Go to Discord now and tell us what you’re excited about!
 </h3>
@@ -707,23 +682,23 @@ Go to Discord now and tell us what you’re excited about!
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="aqotdhgcgg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#aqotdhgcgg table {
+<div id="rulfsbjqta" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rulfsbjqta table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#aqotdhgcgg thead, #aqotdhgcgg tbody, #aqotdhgcgg tfoot, #aqotdhgcgg tr, #aqotdhgcgg td, #aqotdhgcgg th {
+#rulfsbjqta thead, #rulfsbjqta tbody, #rulfsbjqta tfoot, #rulfsbjqta tr, #rulfsbjqta td, #rulfsbjqta th {
   border-style: none;
 }
 
-#aqotdhgcgg p {
+#rulfsbjqta p {
   margin: 0;
   padding: 0;
 }
 
-#aqotdhgcgg .gt_table {
+#rulfsbjqta .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -749,12 +724,12 @@ Go to Discord now and tell us what you’re excited about!
   border-left-color: #D3D3D3;
 }
 
-#aqotdhgcgg .gt_caption {
+#rulfsbjqta .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#aqotdhgcgg .gt_title {
+#rulfsbjqta .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -766,7 +741,7 @@ Go to Discord now and tell us what you’re excited about!
   border-bottom-width: 0;
 }
 
-#aqotdhgcgg .gt_subtitle {
+#rulfsbjqta .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -778,7 +753,7 @@ Go to Discord now and tell us what you’re excited about!
   border-top-width: 0;
 }
 
-#aqotdhgcgg .gt_heading {
+#rulfsbjqta .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -790,13 +765,13 @@ Go to Discord now and tell us what you’re excited about!
   border-right-color: #D3D3D3;
 }
 
-#aqotdhgcgg .gt_bottom_border {
+#rulfsbjqta .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#aqotdhgcgg .gt_col_headings {
+#rulfsbjqta .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -811,7 +786,7 @@ Go to Discord now and tell us what you’re excited about!
   border-right-color: #D3D3D3;
 }
 
-#aqotdhgcgg .gt_col_heading {
+#rulfsbjqta .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -831,7 +806,7 @@ Go to Discord now and tell us what you’re excited about!
   overflow-x: hidden;
 }
 
-#aqotdhgcgg .gt_column_spanner_outer {
+#rulfsbjqta .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -843,15 +818,15 @@ Go to Discord now and tell us what you’re excited about!
   padding-right: 4px;
 }
 
-#aqotdhgcgg .gt_column_spanner_outer:first-child {
+#rulfsbjqta .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#aqotdhgcgg .gt_column_spanner_outer:last-child {
+#rulfsbjqta .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#aqotdhgcgg .gt_column_spanner {
+#rulfsbjqta .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -863,11 +838,11 @@ Go to Discord now and tell us what you’re excited about!
   width: 100%;
 }
 
-#aqotdhgcgg .gt_spanner_row {
+#rulfsbjqta .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#aqotdhgcgg .gt_group_heading {
+#rulfsbjqta .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -893,7 +868,7 @@ Go to Discord now and tell us what you’re excited about!
   text-align: left;
 }
 
-#aqotdhgcgg .gt_empty_group_heading {
+#rulfsbjqta .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -908,15 +883,15 @@ Go to Discord now and tell us what you’re excited about!
   vertical-align: middle;
 }
 
-#aqotdhgcgg .gt_from_md > :first-child {
+#rulfsbjqta .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#aqotdhgcgg .gt_from_md > :last-child {
+#rulfsbjqta .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#aqotdhgcgg .gt_row {
+#rulfsbjqta .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -935,7 +910,7 @@ Go to Discord now and tell us what you’re excited about!
   overflow-x: hidden;
 }
 
-#aqotdhgcgg .gt_stub {
+#rulfsbjqta .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -948,7 +923,7 @@ Go to Discord now and tell us what you’re excited about!
   padding-right: 5px;
 }
 
-#aqotdhgcgg .gt_stub_row_group {
+#rulfsbjqta .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -962,15 +937,15 @@ Go to Discord now and tell us what you’re excited about!
   vertical-align: top;
 }
 
-#aqotdhgcgg .gt_row_group_first td {
+#rulfsbjqta .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#aqotdhgcgg .gt_row_group_first th {
+#rulfsbjqta .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#aqotdhgcgg .gt_summary_row {
+#rulfsbjqta .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -980,16 +955,16 @@ Go to Discord now and tell us what you’re excited about!
   padding-right: 5px;
 }
 
-#aqotdhgcgg .gt_first_summary_row {
+#rulfsbjqta .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#aqotdhgcgg .gt_first_summary_row.thick {
+#rulfsbjqta .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#aqotdhgcgg .gt_last_summary_row {
+#rulfsbjqta .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -999,7 +974,7 @@ Go to Discord now and tell us what you’re excited about!
   border-bottom-color: #D3D3D3;
 }
 
-#aqotdhgcgg .gt_grand_summary_row {
+#rulfsbjqta .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1009,7 +984,7 @@ Go to Discord now and tell us what you’re excited about!
   padding-right: 5px;
 }
 
-#aqotdhgcgg .gt_first_grand_summary_row {
+#rulfsbjqta .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1019,7 +994,7 @@ Go to Discord now and tell us what you’re excited about!
   border-top-color: #D3D3D3;
 }
 
-#aqotdhgcgg .gt_last_grand_summary_row_top {
+#rulfsbjqta .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1029,11 +1004,11 @@ Go to Discord now and tell us what you’re excited about!
   border-bottom-color: #D3D3D3;
 }
 
-#aqotdhgcgg .gt_striped {
+#rulfsbjqta .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#aqotdhgcgg .gt_table_body {
+#rulfsbjqta .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1042,7 +1017,7 @@ Go to Discord now and tell us what you’re excited about!
   border-bottom-color: #D3D3D3;
 }
 
-#aqotdhgcgg .gt_footnotes {
+#rulfsbjqta .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1056,7 +1031,7 @@ Go to Discord now and tell us what you’re excited about!
   border-right-color: #D3D3D3;
 }
 
-#aqotdhgcgg .gt_footnote {
+#rulfsbjqta .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1065,7 +1040,7 @@ Go to Discord now and tell us what you’re excited about!
   padding-right: 5px;
 }
 
-#aqotdhgcgg .gt_sourcenotes {
+#rulfsbjqta .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1079,7 +1054,7 @@ Go to Discord now and tell us what you’re excited about!
   border-right-color: #D3D3D3;
 }
 
-#aqotdhgcgg .gt_sourcenote {
+#rulfsbjqta .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1087,63 +1062,63 @@ Go to Discord now and tell us what you’re excited about!
   padding-right: 5px;
 }
 
-#aqotdhgcgg .gt_left {
+#rulfsbjqta .gt_left {
   text-align: left;
 }
 
-#aqotdhgcgg .gt_center {
+#rulfsbjqta .gt_center {
   text-align: center;
 }
 
-#aqotdhgcgg .gt_right {
+#rulfsbjqta .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#aqotdhgcgg .gt_font_normal {
+#rulfsbjqta .gt_font_normal {
   font-weight: normal;
 }
 
-#aqotdhgcgg .gt_font_bold {
+#rulfsbjqta .gt_font_bold {
   font-weight: bold;
 }
 
-#aqotdhgcgg .gt_font_italic {
+#rulfsbjqta .gt_font_italic {
   font-style: italic;
 }
 
-#aqotdhgcgg .gt_super {
+#rulfsbjqta .gt_super {
   font-size: 65%;
 }
 
-#aqotdhgcgg .gt_footnote_marks {
+#rulfsbjqta .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#aqotdhgcgg .gt_asterisk {
+#rulfsbjqta .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#aqotdhgcgg .gt_indent_1 {
+#rulfsbjqta .gt_indent_1 {
   text-indent: 5px;
 }
 
-#aqotdhgcgg .gt_indent_2 {
+#rulfsbjqta .gt_indent_2 {
   text-indent: 10px;
 }
 
-#aqotdhgcgg .gt_indent_3 {
+#rulfsbjqta .gt_indent_3 {
   text-indent: 15px;
 }
 
-#aqotdhgcgg .gt_indent_4 {
+#rulfsbjqta .gt_indent_4 {
   text-indent: 20px;
 }
 
-#aqotdhgcgg .gt_indent_5 {
+#rulfsbjqta .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1215,23 +1190,23 @@ Go to Discord now and tell us what you’re excited about!
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="xiwenkyhmt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xiwenkyhmt table {
+<div id="xypcflatoi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xypcflatoi table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xiwenkyhmt thead, #xiwenkyhmt tbody, #xiwenkyhmt tfoot, #xiwenkyhmt tr, #xiwenkyhmt td, #xiwenkyhmt th {
+#xypcflatoi thead, #xypcflatoi tbody, #xypcflatoi tfoot, #xypcflatoi tr, #xypcflatoi td, #xypcflatoi th {
   border-style: none;
 }
 
-#xiwenkyhmt p {
+#xypcflatoi p {
   margin: 0;
   padding: 0;
 }
 
-#xiwenkyhmt .gt_table {
+#xypcflatoi .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1257,12 +1232,12 @@ Go to Discord now and tell us what you’re excited about!
   border-left-color: #D3D3D3;
 }
 
-#xiwenkyhmt .gt_caption {
+#xypcflatoi .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xiwenkyhmt .gt_title {
+#xypcflatoi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1274,7 +1249,7 @@ Go to Discord now and tell us what you’re excited about!
   border-bottom-width: 0;
 }
 
-#xiwenkyhmt .gt_subtitle {
+#xypcflatoi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1286,7 +1261,7 @@ Go to Discord now and tell us what you’re excited about!
   border-top-width: 0;
 }
 
-#xiwenkyhmt .gt_heading {
+#xypcflatoi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1298,13 +1273,13 @@ Go to Discord now and tell us what you’re excited about!
   border-right-color: #D3D3D3;
 }
 
-#xiwenkyhmt .gt_bottom_border {
+#xypcflatoi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xiwenkyhmt .gt_col_headings {
+#xypcflatoi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1319,7 +1294,7 @@ Go to Discord now and tell us what you’re excited about!
   border-right-color: #D3D3D3;
 }
 
-#xiwenkyhmt .gt_col_heading {
+#xypcflatoi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1339,7 +1314,7 @@ Go to Discord now and tell us what you’re excited about!
   overflow-x: hidden;
 }
 
-#xiwenkyhmt .gt_column_spanner_outer {
+#xypcflatoi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1351,15 +1326,15 @@ Go to Discord now and tell us what you’re excited about!
   padding-right: 4px;
 }
 
-#xiwenkyhmt .gt_column_spanner_outer:first-child {
+#xypcflatoi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xiwenkyhmt .gt_column_spanner_outer:last-child {
+#xypcflatoi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xiwenkyhmt .gt_column_spanner {
+#xypcflatoi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1371,11 +1346,11 @@ Go to Discord now and tell us what you’re excited about!
   width: 100%;
 }
 
-#xiwenkyhmt .gt_spanner_row {
+#xypcflatoi .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xiwenkyhmt .gt_group_heading {
+#xypcflatoi .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1401,7 +1376,7 @@ Go to Discord now and tell us what you’re excited about!
   text-align: left;
 }
 
-#xiwenkyhmt .gt_empty_group_heading {
+#xypcflatoi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1416,15 +1391,15 @@ Go to Discord now and tell us what you’re excited about!
   vertical-align: middle;
 }
 
-#xiwenkyhmt .gt_from_md > :first-child {
+#xypcflatoi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xiwenkyhmt .gt_from_md > :last-child {
+#xypcflatoi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xiwenkyhmt .gt_row {
+#xypcflatoi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1443,7 +1418,7 @@ Go to Discord now and tell us what you’re excited about!
   overflow-x: hidden;
 }
 
-#xiwenkyhmt .gt_stub {
+#xypcflatoi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1456,7 +1431,7 @@ Go to Discord now and tell us what you’re excited about!
   padding-right: 5px;
 }
 
-#xiwenkyhmt .gt_stub_row_group {
+#xypcflatoi .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1470,15 +1445,15 @@ Go to Discord now and tell us what you’re excited about!
   vertical-align: top;
 }
 
-#xiwenkyhmt .gt_row_group_first td {
+#xypcflatoi .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xiwenkyhmt .gt_row_group_first th {
+#xypcflatoi .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xiwenkyhmt .gt_summary_row {
+#xypcflatoi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1488,16 +1463,16 @@ Go to Discord now and tell us what you’re excited about!
   padding-right: 5px;
 }
 
-#xiwenkyhmt .gt_first_summary_row {
+#xypcflatoi .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xiwenkyhmt .gt_first_summary_row.thick {
+#xypcflatoi .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xiwenkyhmt .gt_last_summary_row {
+#xypcflatoi .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1507,7 +1482,7 @@ Go to Discord now and tell us what you’re excited about!
   border-bottom-color: #D3D3D3;
 }
 
-#xiwenkyhmt .gt_grand_summary_row {
+#xypcflatoi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1517,7 +1492,7 @@ Go to Discord now and tell us what you’re excited about!
   padding-right: 5px;
 }
 
-#xiwenkyhmt .gt_first_grand_summary_row {
+#xypcflatoi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1527,7 +1502,7 @@ Go to Discord now and tell us what you’re excited about!
   border-top-color: #D3D3D3;
 }
 
-#xiwenkyhmt .gt_last_grand_summary_row_top {
+#xypcflatoi .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1537,11 +1512,11 @@ Go to Discord now and tell us what you’re excited about!
   border-bottom-color: #D3D3D3;
 }
 
-#xiwenkyhmt .gt_striped {
+#xypcflatoi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xiwenkyhmt .gt_table_body {
+#xypcflatoi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1550,7 +1525,7 @@ Go to Discord now and tell us what you’re excited about!
   border-bottom-color: #D3D3D3;
 }
 
-#xiwenkyhmt .gt_footnotes {
+#xypcflatoi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1564,7 +1539,7 @@ Go to Discord now and tell us what you’re excited about!
   border-right-color: #D3D3D3;
 }
 
-#xiwenkyhmt .gt_footnote {
+#xypcflatoi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1573,7 +1548,7 @@ Go to Discord now and tell us what you’re excited about!
   padding-right: 5px;
 }
 
-#xiwenkyhmt .gt_sourcenotes {
+#xypcflatoi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1587,7 +1562,7 @@ Go to Discord now and tell us what you’re excited about!
   border-right-color: #D3D3D3;
 }
 
-#xiwenkyhmt .gt_sourcenote {
+#xypcflatoi .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1595,63 +1570,63 @@ Go to Discord now and tell us what you’re excited about!
   padding-right: 5px;
 }
 
-#xiwenkyhmt .gt_left {
+#xypcflatoi .gt_left {
   text-align: left;
 }
 
-#xiwenkyhmt .gt_center {
+#xypcflatoi .gt_center {
   text-align: center;
 }
 
-#xiwenkyhmt .gt_right {
+#xypcflatoi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xiwenkyhmt .gt_font_normal {
+#xypcflatoi .gt_font_normal {
   font-weight: normal;
 }
 
-#xiwenkyhmt .gt_font_bold {
+#xypcflatoi .gt_font_bold {
   font-weight: bold;
 }
 
-#xiwenkyhmt .gt_font_italic {
+#xypcflatoi .gt_font_italic {
   font-style: italic;
 }
 
-#xiwenkyhmt .gt_super {
+#xypcflatoi .gt_super {
   font-size: 65%;
 }
 
-#xiwenkyhmt .gt_footnote_marks {
+#xypcflatoi .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xiwenkyhmt .gt_asterisk {
+#xypcflatoi .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xiwenkyhmt .gt_indent_1 {
+#xypcflatoi .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xiwenkyhmt .gt_indent_2 {
+#xypcflatoi .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xiwenkyhmt .gt_indent_3 {
+#xypcflatoi .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xiwenkyhmt .gt_indent_4 {
+#xypcflatoi .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xiwenkyhmt .gt_indent_5 {
+#xypcflatoi .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1712,7 +1687,7 @@ Go to Discord now and tell us what you’re excited about!
 </div>
 </section><section class="slide level2"><h2>Project Objective</h2>
 <ul>
-<li>Provide users with a self-service tool that predicts the likelihood of a food establishment failing their next inspection</li>
+<li>Provide <del>users</del> <strong>food inspectors</strong> with a self-service tool that predicts the likelihood of a food establishment failing their next inspection.</li>
 </ul>
 <h2>
 <br>Project Requirements
@@ -1757,7 +1732,8 @@ Go to Discord now and tell us what you’re excited about!
 <div class="smaller">
 <ul>
 <li>Use any email you have access to (personal is preferred to avoid corporate spam filters)</li>
-<li>Set your username as the prefix to your email</li>
+<li>Set your username as <code>firstname.lastname</code>
+</li>
 <li>Choose any password</li>
 </ul>
 </div>
@@ -1765,7 +1741,7 @@ Go to Discord now and tell us what you’re excited about!
 
 <img data-src="slide_resources/connect_sign_up_email.png" class="r-stretch"><ul>
 <li>Check your email for a confirmation email.</li>
-<li>👉 It will likely be in your <span class="fuchsia"><strong>spam folder</strong>.</span>
+<li>It will likely be in your <span class="fuchsia"><strong>spam folder</strong>.</span>
 </li>
 <li>The email will be from <span class="fuchsia"><strong>conf23workflows@training.rstudio.com</strong></span>
 </li>
@@ -1775,11 +1751,11 @@ Go to Discord now and tell us what you’re excited about!
 <div class="column" style="width:50%;">
 <ul>
 <li>Your account has already been created!</li>
-<li>Log in with the prefix of the email that you used to sign up for this workshop. <br><br>For example:
+<li>Log in with username as <code>firstname.lastname</code>. <br><br>For example:
 <ul>
-<li>email: <code>edwardes.s@gmail.com</code>
+<li>Name: <code>Ryan Johnson</code>
 </li>
-<li>username: <code>edwardes.s</code>
+<li>Username: <code>ryan.johnson</code>
 </li>
 </ul>
 </li>
@@ -1790,7 +1766,82 @@ Go to Discord now and tell us what you’re excited about!
 <p><img data-src="slide_resources/workbench_login.png" style="width:100.0%"></p>
 </div>
 </div>
-<!-- TODO: Add in a slide with everyone's usernames -->
+</section><section class="slide level2"><h2>Workbench Setup // Step 1</h2>
+<p>Your account has already been created!</p>
+<div style="font-size: 60%;">
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><code>aaron.amos</code></p>
+<p><code>david.sluder</code></p>
+<p><code>jenny.vo</code></p>
+<p><code>katie.masiello</code></p>
+<p><code>madison.gipson</code></p>
+<p><code>nicholas.skaff</code></p>
+<p><code>rich</code></p>
+<p><code>sean.hackett</code></p>
+<p><code>thiago.moreira</code></p>
+<p><code>yuting.chen</code></p>
+<p><code>aaron.novotny</code></p>
+<p><code>emily.prezzato</code></p>
+<p><code>joanne.ang</code></p>
+<p><code>kelly.carscadden</code></p>
+<p><code>matthew.defrank</code></p>
+<p><code>nick.einterz</code></p>
+</div><div class="column" style="width:25%;">
+<p><code>richard.carder</code></p>
+<p><code>shannon.coulter</code></p>
+<p><code>thiyanga.talagala</code></p>
+<p><code>yuzhi.lin</code></p>
+<p><code>amrita.sridhar</code></p>
+<p><code>ephraim.infante</code></p>
+<p><code>jordan.creed</code></p>
+<p><code>kwangshi.shu</code></p>
+<p><code>mccrea.cobb</code></p>
+<p><code>nicklas.smith</code></p>
+<p><code>robin.donatello</code></p>
+<p><code>stephen.howe</code></p>
+<p><code>thuy.scanlon</code></p>
+<p><code>angie.reed</code></p>
+<p><code>eric.prager</code></p>
+<p><code>joseph.orton</code></p>
+</div><div class="column" style="width:25%;">
+<p><code>lia.bozzone</code></p>
+<p><code>miriam.skorupa</code></p>
+<p><code>patrick.vandenberg</code></p>
+<p><code>ryan</code></p>
+<p><code>steve.hummel</code></p>
+<p><code>ubuntu</code></p>
+<p><code>ashley.naimi</code></p>
+<p><code>erika.manning</code></p>
+<p><code>julia.silge</code></p>
+<p><code>lu.mao</code></p>
+<p><code>naomi.smorenburg</code></p>
+<p><code>payam.khodabakhshi</code></p>
+<p><code>sam.edwardes</code></p>
+<p><code>test_user</code></p>
+<p><code>user1</code></p>
+<p><code>carter.coughlin</code></p>
+</div><div class="column" style="width:25%;">
+<p><code>gagan</code></p>
+<p><code>justin.lee</code></p>
+<p><code>luis.dominguez</code></p>
+<p><code>nathaniel.hawkins</code></p>
+<p><code>rahul.sangole</code></p>
+<p><code>sarah.gibson</code></p>
+<p><code>test_user1</code></p>
+<p><code>user2</code></p>
+<p><code>dale.hess</code></p>
+<p><code>george.tenney</code></p>
+<p><code>justin.mary</code></p>
+<p><code>luke.slipski</code></p>
+<p><code>nergis.zaim</code></p>
+<p><code>rebecca.butler</code></p>
+<p><code>scott.tucholka</code></p>
+<p><code>test_user2</code></p>
+<p><code>user3</code></p>
+</div>
+</div>
+</div>
 </section><section class="slide level2"><h2>Workbench Setup // Step 2</h2>
 <div class="columns">
 <div class="column smaller" style="width:50%;">
@@ -1846,7 +1897,7 @@ Go to Discord now and tell us what you’re excited about!
 </div>
 
 <div class="footer footer-default">
-<p><a href="https://posit-conf-2023.github.io/ds-workflows-r/">https://posit-conf-2023.github.io/ds-workflows-r/</a></p>
+<p><a href="https://katie.quarto.pub/ds-workflows-r/">Data Science Workflows with Posit Tools - R Focus</a></p>
 </div>
 </div>
 </div>
