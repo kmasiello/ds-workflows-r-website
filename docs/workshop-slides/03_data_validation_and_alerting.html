@@ -10,7 +10,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/posit_slides/posit-slides.js"></script>
 <link href="../site_libs/quarto-contrib/bootstrap-icons-1.9.1/all.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.340">
+  <meta name="generator" content="quarto-1.3.433">
 
   <title>Data Science Workflows with Posit Tools - R focus – data_validation_and_alerting</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -337,20 +337,24 @@
 </div>
 </div>
 </section>
+<section class="slide level2">
+<h2>Where are we</h2>
+
+<img data-src="slide_resources/workflow_diagram.jpg" class="r-stretch quarto-figure-center"></section>
 <section class="slide level2" data-background-image="_extensions/positconfslides/assets/backgrounds/brackets-light.svg" data-background-size="contain">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:100%;">
 <h2 style="margin-left:50px; margin-top:5px;">Section Agenda</h2>
 <ul>
-<li>How can I ensure this is quality data? 🤔</li>
-<li>How will I know when it’s not?</li>
+<li>Ensure quality data is flowing through the pipeline</li>
+<li>Get alerts via automation</li>
 </ul>
 </div>
 </div>
 </section>
 <section class="slide level2">
-<h2>How can I ensure this is quality data?</h2>
+<h2>How can I ensure the data in my pipeline is quality data?</h2>
 <p><br> 🧰 <code>pointblank</code> for data validation <br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -440,7 +444,6 @@
 </section>
 <section class="slide level2">
 <h2><i class="bi-sign-turn-right-fill " style="color: orange;" role="img" aria-hidden="true"></i> There’s much more to <code>pointblank</code></h2>
-<p><a href="https://rstudio.github.io/pointblank/" class="uri">https://rstudio.github.io/pointblank/</a></p>
 <div class="fragment fade-in-then-out absolute" style="top: 130px; ">
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -456,25 +459,17 @@
 <div class="columns">
 <div class="column" style="width:40%;">
 <ul>
-<li><span class="lightgray">Is your data quality changing over time? Create a <code>multiagent</code> to summarize repeated validations.</span></li>
-<li>Standardize validations across your organization. Agents and informants can be saved as YAML ✨</li>
+<li>Create a dynamic Data Dictionary to fully describe the data</li>
 </ul>
-</div><div class="column" style="width:0%;">
-<p><img data-src="slide_resources/yaml.png" class="absolute" style="top: 220px; width: 500px; "></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="slide_resources/data-dictionary.png"></p>
 </div>
 </div>
 </div>
 <div class="fragment fade-in-then-out absolute" style="top: 130px; ">
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li><span class="lightgray">Is your data quality changing over time? Create a <code>multiagent</code> to summarize repeated validations.</span></li>
-<li><span class="lightgray">Standardize validations across your organization. Agents and informants can be saved as YAML ✨</span></li>
-</ul>
-</div><div class="column" style="width:50%;">
-
-</div><h3><br><strong>In-depth <code>pointblank</code> test drive on Posit Cloud: <a href="https://posit.cloud/project/3411822" class="uri">https://posit.cloud/project/3411822</a></strong></h3>
-</div>
+<h3>
+Try the comprehensive <code>pointblank</code> test drive on Posit Cloud: <a href="https://posit.cloud/project/3411822" class="uri">https://posit.cloud/project/3411822</a>
+</h3>
 </div>
 </section>
 <section class="slide level2">
@@ -530,19 +525,17 @@
 <section class="slide level2">
 <h2>How <code>blastula</code> works with Connect</h2>
 <p><img data-src="slide_resources/blastula_process.png" class="absolute" style="top: 130px; "></p>
-<div class="absolute smaller fragment" style="bottom: 40px; ">
+<div class="absolute smaller" style="bottom: 40px; ">
 <p><strong>Key functions:</strong></p>
 <p>🧶 <code>blastula::render_connect_email</code></p>
 <p>✉️ <code>blastula::attach_connect_email</code></p>
 <p>⛔ <code>blastula::suppress_scheduled_email</code></p>
 </div>
-<div class="fragment">
 <div class="absolute larger" style="left: 780px; bottom: 60px; ">
 <p><i class="bi-arrow-left " style="" role="img" aria-hidden="true"></i></p>
 </div>
 <div class="absolute smaller" style="margin-left: 900px; margin-right: auto;bottom: 40px; right: 150px; ">
 <p>🧰 couple these with logic statements to send (or suppress) condition-based emails</p>
-</div>
 </div>
 </section>
 <section class="slide level2">
@@ -550,35 +543,32 @@
 
 <img data-src="slide_resources/conditional_email_example.png" class="r-stretch"></section>
 <section class="slide level2">
-<h2>Work within the limitations of email clients</h2>
-<p>⚠️ Common Pitfalls</p>
+<h2>Be aware…</h2>
+<p>⚠️ Common mistakes when creating emails</p>
 <ul>
 <li>There is no interactive runtime for an email</li>
 <li>Javascript-dependent content will generally not render when emailed – not due to a limitation of blastula, but as result of how email clients process HTML</li>
 </ul>
-<p>🧰 Best practices for embedding objects:</p>
+<div class="fragment">
+<p>🧰 Best practices for embedding objects an email:</p>
 <ul>
-<li>ggplot2 output can be included in the email output directly</li>
-<li>Create nicely formatted tables with the <code>gt</code> package. Just remember, no interactivity!</li>
+<li>ggplot2 output can be included in the blastula email output directly</li>
+<li>Create nicely formatted tables with the <code>gt</code> package. (Just remember, no interactivity!)</li>
 <li>If you’d like to include a rendering of a widget (e.g., a dial or info box), use the <code>webshot2</code> package to take a capture of the widget and embed it as an image</li>
 <li>If your email recipient wants more information or interactivity, direct them to a report or dashboard deployed to Connect</li>
 </ul>
+</div>
 </section>
-<section class="slide level2">
+<section class="slide level2" data-background-image="_extensions/positconfslides/assets/backgrounds/brackets-light.svg" data-background-size="contain">
 <h2></h2>
-<div class="center">
-<h2>
-<br><strong>Activity Time!</strong>
-</h2>
-</div>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Activity</strong></p>
-</div>
-<div class="callout-content">
-<p>👉 Open the file <code>materials/activities/activity-04_conditional_emails.Rmd</code></p>
-<p>Activity objective: Use <code>blastula</code> to create custom emails for Connect to send on condition.</p>
+<div class="columns">
+<div class="column" style="width:100%;">
+<h2 style="margin-left:50px; margin-top:5px;"></h2>
+<div class="section-title">
+<h3>
+<strong>Demo Time</strong>
+</h3>
+<p><a href="https://connect.conf23workflows.training.posit.co/connect/#/apps/da11710e-40c3-400c-a0c4-a8174bc9a563/info/35">conditional email example</a></p>
 </div>
 </div>
 </div>
@@ -591,7 +581,7 @@
 <p><i class="bi-sign-turn-right-fill " style="color: orange;" role="img" aria-hidden="true"></i> Send alerts to a Slack channel or MS Teams, or via text message: <a href="https://rviews.rstudio.com/2020/06/18/how-to-have-r-notify-you/" class="uri">https://rviews.rstudio.com/2020/06/18/how-to-have-r-notify-you/</a></p>
 
 <div class="footer footer-default">
-<p><a href="https://posit-conf-2023.github.io/ds-workflows-r/">https://posit-conf-2023.github.io/ds-workflows-r/</a></p>
+<p><a href="https://katie.quarto.pub/ds-workflows-r/">Data Science Workflows with Posit Tools - R Focus</a></p>
 </div>
 </div>
 </div>

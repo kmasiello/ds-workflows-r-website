@@ -369,10 +369,13 @@ Activity objective: Use `pointblank` to validate data, remove non-compliant reco
 
 :::
 
-##
+## {.brackets-light}
 
-:::{.center}
-<h2> <br>**Demo Time**</h2>
+:::{.section-title}
+<h3>**Demo Time**</h3>
+
+[conditional email example](https://connect.conf23workflows.training.posit.co/connect/#/apps/da11710e-40c3-400c-a0c4-a8174bc9a563/info/35)
+
 :::
 
 
