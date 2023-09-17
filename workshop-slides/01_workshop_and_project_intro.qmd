@@ -119,7 +119,7 @@ https://posit.co/code-of-conduct/
 
 ::: {.columns .center}
 ::: {.column width="50%"}
-::: {style="background: #F5EF94; width: 400px; height: 400px; margin: 50px; box-shadow: 0 18px 18px -9px lightgray; margin-left: auto; margin-right: auto;"}
+::: {style="background: #FB629A; width: 400px; height: 400px; margin: 50px; box-shadow: 0 18px 18px -9px lightgray; margin-left: auto; margin-right: auto;"}
 :::
 
 "I'm lost / need help"
